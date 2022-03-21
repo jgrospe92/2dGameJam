@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{DA033804-A2C5-C742-2C52-3FF07CD67176}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerHp.cs">
+    <Files>
+      <File FileName="Assets/Scripts/PlayerHp.cs" Line="65" Column="33" />
+      <File FileName="Assets/Scripts/MainMenu.cs" Line="40" Column="9" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="2dGameJam" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="PlayerHp.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a013456a-bc58-4d1d-8a31-5b4caac0fae3" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
