@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AIPatrol : MonoBehaviour
@@ -7,13 +5,12 @@ public class AIPatrol : MonoBehaviour
 
 
     public bool mustPatrol;
-    
-
-
+   
     // Control enemy movement
     public float walkSpeed;
 
     public Rigidbody2D rigidBody;
+
     [SerializeField] private GameObject groundObject;
     [SerializeField] private bool isGrounded;
     [SerializeField] private LayerMask layers;
@@ -22,13 +19,50 @@ public class AIPatrol : MonoBehaviour
 
     [Header("RayCast parameter")]
     [SerializeField] private float maxRayDistance;
+
+
+
+    [SerializeField] private HealthBar hp;
+
+    public int maxHp = 20;
+    private int currentHp;
+
+
     // Start is called before the first frame update
     void Start()
     {
         mustPatrol = true;
         isGrounded = true;
 
+        // set inital HP
+        currentHp = maxHp;
+        hp.setMaxHp(currentHp);
+        hp.fill.color = Color.red;
+
+        
+
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            TakeDamage(20);
+            Debug.Log("I hit an enemy");
+            Debug.Log("current hp" + this.currentHp);
+            Debug.Log("max hp" + this.maxHp);
+
+        }
+    }
+
+    // when damage
+    void TakeDamage(int damage)
+    {
+        currentHp -= damage;
+
+        hp.setHealth(currentHp);
+    }
+
 
     private void GroundCheck()
     {
@@ -43,6 +77,8 @@ public class AIPatrol : MonoBehaviour
         {
             flip();
         }
+
+
     }
 
     private void FixedUpdate()
