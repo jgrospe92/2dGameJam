@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -27,10 +26,10 @@ public class PlayerHp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            takeDamage(20);
-        }
+        //if (Input.GetKeyDown(KeyCode.E))
+        //{
+        //    takeDamage(20);
+        //}
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
