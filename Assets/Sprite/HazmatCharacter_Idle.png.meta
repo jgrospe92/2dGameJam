@@ -127,12 +127,12 @@ TextureImporter:
       name: HazmatCharacter_Idle_2
       rect:
         serializedVersion: 2
-        x: 269
+        x: 222
         y: 42
-        width: 341
+        width: 389
         height: 480
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.48971722, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -148,12 +148,12 @@ TextureImporter:
       name: HazmatCharacter_Idle_4
       rect:
         serializedVersion: 2
-        x: 733
+        x: 728
         y: 36
-        width: 351
+        width: 358
         height: 474
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4567039, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -166,22 +166,22 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HazmatCharacter_Idle_6
+      name: HazmatCharacter_Idle_0
       rect:
         serializedVersion: 2
-        x: 1248
+        x: 1304
         y: 36
-        width: 402
-        height: 504
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 348
+        height: 474
+      alignment: 9
+      pivot: {x: 0.40431035, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e759ecf8594bb1610800000000000000
-      internalID: 1593065447661409662
+      spriteID: 0c9d685ca8c26af20800000000000000
+      internalID: 3433480740447640000
       vertices: []
       indices: 
       edges: []
