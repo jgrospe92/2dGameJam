@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed = 3;
     [SerializeField] private float jumpSpeeed = 5;
 
-    
+    [HideInInspector] public bool isFacingRIght = true;
 
     // Wall
     [SerializeField] private LayerMask wallLayer;
@@ -61,10 +61,12 @@ public class PlayerMovement : MonoBehaviour
         if (horizontalInput > 0.01f)
         {
             spriteRenderer.flipX = false;
+                isFacingRIght = true;
 
         } else if (horizontalInput < -0.01f)
         {
             spriteRenderer.flipX = true;
+                isFacingRIght = false;
         }
 
 

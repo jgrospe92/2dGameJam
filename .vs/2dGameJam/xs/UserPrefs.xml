@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{DA033804-A2C5-C742-2C52-3FF07CD67176}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerShoot.cs">
     <Files>
+      <File FileName="Assets/Scripts/Bullet.cs" Line="14" Column="32" />
       <File FileName="Assets/Scripts/EnemySpawn.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerHp.cs" Line="42" Column="8" />
-      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="86" Column="10" />
-      <File FileName="Assets/Scripts/OxygenLevel.cs" Line="17" Column="8" />
-      <File FileName="Assets/Scripts/HealthBar.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="64" Column="17" />
+      <File FileName="Assets/Scripts/PlayerShoot.cs" Line="36" Column="56" />
+      <File FileName="Assets/Scripts/AIPatrol.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +13,7 @@
           <Node name="2dGameJam" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="PlayerMovement.cs" selected="True" />
+                <Node name="PlayerShoot.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -23,7 +23,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c44dfa91-8b9f-46cc-972c-f7dd8978fc6e" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9ffeb72c-a7ea-4073-ba0a-110dac552151" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
