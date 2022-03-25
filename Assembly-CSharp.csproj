@@ -63,9 +63,11 @@
     <Compile Include="Assets/Scripts/PlayerMovement.cs" />
     <Compile Include="Assets/Scripts/HealthBar.cs" />
     <Compile Include="Assets/Scripts/HP_Restore.cs" />
-    <Compile Include="Assets/Scripts/Timer Countdown.cs" />
-    <Compile Include="Assets/Scripts/Ladder.cs" />
+    <Compile Include="Assets/Scripts/TimerCountdown.cs" />
     <Compile Include="Assets/Scripts/EnemySpawn.cs" />
+    <Compile Include="Assets/Scripts/Ladder.cs" />
+    <Compile Include="Assets/Scripts/TimerController.cs" />
+    <Compile Include="Assets/Scripts/OxygenLevel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -10,6 +10,7 @@ public class PlayerHp : MonoBehaviour
 
     public GameObject hud;
 
+
     public int maxHp = 100;
     public int currentHp;
     // Start is called before the first frame update
@@ -30,6 +31,7 @@ public class PlayerHp : MonoBehaviour
         //{
         //    takeDamage(20);
         //}
+       
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -37,7 +39,9 @@ public class PlayerHp : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             takeDamage(20);
+       
         }
+     
 
         if (collision.gameObject.tag == "HP")
         {

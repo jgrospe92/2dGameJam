@@ -48,6 +48,7 @@ public class AIPatrol : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             TakeDamage(20);
+            
             Debug.Log("I hit an enemy");
             Debug.Log("current hp" + this.currentHp);
             Debug.Log("max hp" + this.maxHp);

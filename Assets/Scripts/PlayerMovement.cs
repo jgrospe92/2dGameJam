@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed = 3;
     [SerializeField] private float jumpSpeeed = 5;
 
+    
+
     // Wall
     [SerializeField] private LayerMask wallLayer;
 
@@ -19,8 +21,14 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isDead = false;
 
+    // Damage Check
+    public bool damage = false;
+
     // Ref for the sprite
     SpriteRenderer spriteRenderer;
+
+    // Damage sprite
+    public Sprite deathSprite;
 
     //  Ref for animator
     private Animator anim;
@@ -46,6 +54,8 @@ public class PlayerMovement : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
 
+          
+
 
         // handles character directins
         if (horizontalInput > 0.01f)
@@ -68,8 +78,22 @@ public class PlayerMovement : MonoBehaviour
         // Set Animation
         anim.SetBool("isWalking", horizontalInput  != 0);
         anim.SetBool("isJump", jumpState == JumpState.JUMPING);
+        anim.SetBool("isDamage", !damage);
+            Debug.Log("Player hurt" + damage);
+ 
+        }
+        else
+        {
+            anim.SetBool("isDead", true);
+            anim.enabled = false;
+            ChangeSprite(deathSprite);
         }
 
+    }
+
+    private void ChangeSprite(Sprite sprite)
+    {
+        spriteRenderer.sprite = sprite;
     }
 
     // jump mechanics
