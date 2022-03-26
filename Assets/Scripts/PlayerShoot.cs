@@ -27,16 +27,8 @@ public class PlayerShoot : MonoBehaviour
     // shoot methid
     void Shoot()
     {
-        //float angle = pm.isFacingRIght ? 0f : 180f;
-        if (pm.isFacingRIght)
-        {
-            Instantiate(bulletPreFab, firingPoint.position, Quaternion.Euler(new Vector3(0f, 0f, 0f)));
-        }
-        {
-            Instantiate(bulletPreFab, new Vector2(-2.5f, 0), Quaternion.Euler(new Vector3(0f, 0f, 180f)));
-        }
-
-        
-        Debug.Log(firingPoint.position);
+        float angle = pm.isFacingRIght ? 0f : 180f;
+        Instantiate(bulletPreFab, firingPoint.position, Quaternion.Euler(new Vector3(0f, 0f, angle)));
+     
     }
 }

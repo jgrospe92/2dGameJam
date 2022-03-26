@@ -11,7 +11,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed = 3;
     [SerializeField] private float jumpSpeeed = 5;
 
+    // movement && direction
     [HideInInspector] public bool isFacingRIght = true;
+    public float horizontalInput = 0f;
+    public bool m_FacingRight = true;
+
+    // HP GameObject
+    public GameObject Hp;
 
     // Wall
     [SerializeField] private LayerMask wallLayer;
@@ -41,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+       
     }
 
 
@@ -51,23 +58,31 @@ public class PlayerMovement : MonoBehaviour
         if (!isDead)
         {
 
-        float horizontalInput = Input.GetAxis("Horizontal");
+        horizontalInput = Input.GetAxis("Horizontal");
         body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
 
           
 
 
         // handles character directins
-        if (horizontalInput > 0.01f)
+        if (horizontalInput > 0.01f && !m_FacingRight)
         {
-            spriteRenderer.flipX = false;
+                //spriteRenderer.flipX = false;
+                //transform.Rotate(0f, 0f, 0f);
                 isFacingRIght = true;
+                flip();
+                Hp.transform.Rotate(0f, 180f, 0f);
 
-        } else if (horizontalInput < -0.01f)
+
+            } else if (horizontalInput < -0.01f && m_FacingRight)
         {
-            spriteRenderer.flipX = true;
+                //transform.Rotate(0f, 180f, 0f);
+                // spriteRenderer.flipX = true;
                 isFacingRIght = false;
-        }
+                flip();
+                Hp.transform.Rotate(0f, -180f, 0f);
+
+            }
 
 
         if (Input.GetKey(KeyCode.Space) && jumpState == JumpState.GROUNDED)
@@ -91,6 +106,15 @@ public class PlayerMovement : MonoBehaviour
             ChangeSprite(deathSprite);
         }
 
+    }
+
+   
+
+    void flip()
+    {
+        m_FacingRight = !m_FacingRight;
+        transform.rotation = Quaternion.Euler(0, 180, 0) * transform.rotation;
+     
     }
 
     private void ChangeSprite(Sprite sprite)
