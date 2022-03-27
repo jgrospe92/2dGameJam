@@ -58,8 +58,9 @@ MonoBehaviour:
     m_Bits: 64
   otherEnemy: {fileID: 0}
   maxRayDistance: 10
+  bulletPrefab: {fileID: 4330762257541899703, guid: badffe35fd3a94989b727a5998b49202, type: 3}
   hp: {fileID: 4542586052664358230}
-  maxHp: 20
+  maxHp: 25
 --- !u!50 &1638741644414240761
 Rigidbody2D:
   serializedVersion: 4

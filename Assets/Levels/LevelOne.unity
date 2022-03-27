@@ -11163,9 +11163,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -8722152418105608363, guid: 06a5339d1f74e410d848cc937ff2ead5, type: 3}
     - target: {fileID: 1638741644414240762, guid: 6a5e2c1343ec64d3890ebfb3c40eaf97, type: 3}
+      propertyPath: maxHp
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638741644414240762, guid: 6a5e2c1343ec64d3890ebfb3c40eaf97, type: 3}
       propertyPath: walkSpeed
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 1638741644414240762, guid: 6a5e2c1343ec64d3890ebfb3c40eaf97, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 4330762257541899703, guid: badffe35fd3a94989b727a5998b49202, type: 3}
     - target: {fileID: 1638741644414240763, guid: 6a5e2c1343ec64d3890ebfb3c40eaf97, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -12366,9 +12374,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5427726931520388419, guid: 9679c11d232d44827aaab290bc8d8df6, type: 3}
+      propertyPath: m_Value
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 5427726932074300952, guid: 9679c11d232d44827aaab290bc8d8df6, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5427726932074300954, guid: 9679c11d232d44827aaab290bc8d8df6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5427726932730802100, guid: 9679c11d232d44827aaab290bc8d8df6, type: 3}
       propertyPath: m_AnchorMax.x
@@ -12390,6 +12406,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Doggo
       objectReference: {fileID: 0}
+    - target: {fileID: 7125912623167000558, guid: 9679c11d232d44827aaab290bc8d8df6, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 4330762257541899703, guid: badffe35fd3a94989b727a5998b49202, type: 3}
     - target: {fileID: 7125912623167000558, guid: 9679c11d232d44827aaab290bc8d8df6, type: 3}
       propertyPath: layers.m_Bits
       value: 128

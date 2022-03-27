@@ -20,12 +20,15 @@ public class AIPatrol : MonoBehaviour
     [Header("RayCast parameter")]
     [SerializeField] private float maxRayDistance;
 
+    // ref to the bullet
+    public Bullet bulletPrefab;
+
 
 
     [SerializeField] private HealthBar hp;
 
-    public int maxHp = 20;
-    private int currentHp;
+    public float maxHp;
+    private float currentHp;
 
 
     // Start is called before the first frame update
@@ -37,27 +40,27 @@ public class AIPatrol : MonoBehaviour
         // set inital HP
         currentHp = maxHp;
         hp.setMaxHp(currentHp);
-        hp.fill.color = Color.red;
+       
 
-        
+
 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "bullet")
         {
-            TakeDamage(20);
-            
-            Debug.Log("I hit an enemy");
-            Debug.Log("current hp" + this.currentHp);
-            Debug.Log("max hp" + this.maxHp);
+            TakeDamage(bulletPrefab.bulletDamage);
+        }
 
+        if (currentHp < 0.01f)
+        {
+            Destroy(gameObject);
         }
     }
 
     // when damage
-    void TakeDamage(int damage)
+    void TakeDamage(float damage)
     {
         currentHp -= damage;
 
@@ -73,6 +76,8 @@ public class AIPatrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        hp.fill.color = Color.red;
+
         GroundCheck();
         if (!isGrounded)
         {

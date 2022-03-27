@@ -25,24 +25,23 @@ public class PlayerHp : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        //if (Input.GetKeyDown(KeyCode.E))
-        //{
-        //    takeDamage(20);
-        //}
-       
-    }
+    //void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.E))
+    //    {
+    //        takeDamage(20);
+    //    }
+
+    //}
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
         if (collision.gameObject.tag == "Enemy")
         {
             takeDamage(20);
-       
         }
      
-
         if (collision.gameObject.tag == "HP")
         {
             if (currentHp < 100)
