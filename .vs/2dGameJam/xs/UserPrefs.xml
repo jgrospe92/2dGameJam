@@ -1,12 +1,18 @@
 ﻿<Properties StartupConfiguration="{DA033804-A2C5-C742-2C52-3FF07CD67176}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerHp.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/AIPatrol.cs">
     <Files>
-      <File FileName="Assets/Scripts/Bullet.cs" Line="7" Column="34" />
+      <File FileName="Assets/Scripts/CollectiblesCounter.cs" Line="3" Column="33" />
+      <File FileName="Assets/Scripts/UpdateCounter.cs" Line="10" Column="29" />
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="165" Column="48" />
+      <File FileName="Assets/Scripts/OxygenLevel.cs" />
+      <File FileName="Assets/Scripts/PlayerHp.cs" Line="67" Column="12" />
+      <File FileName="Assets/Scripts/TimerCountdown.cs" />
       <File FileName="Assets/Scripts/HealthBar.cs" />
-      <File FileName="Assets/Scripts/PlayerShoot.cs" />
-      <File FileName="Assets/Scripts/AIPatrol.cs" Line="57" Column="10" />
-      <File FileName="Assets/Scripts/PlayerHp.cs" Line="44" Column="6" />
-      <File FileName="Assets/Scripts/PlayerMovement.cs" />
+      <File FileName="Assets/Scripts/MainMenu.cs" />
+      <File FileName="Assets/Scripts/EnemySpawn.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Bullet.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/AIPatrol.cs" Line="47" Column="45" />
+      <File FileName="Assets/Scripts/CollectObjectScript.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,7 +20,7 @@
           <Node name="2dGameJam" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="PlayerHp.cs" selected="True" />
+                <Node name="AIPatrol.cs" selected="True" />
               </Node>
             </Node>
           </Node>

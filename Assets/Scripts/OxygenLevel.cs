@@ -14,9 +14,6 @@ public class OxygenLevel : MonoBehaviour
         slider.maxValue = Oxygen;
         slider.value = Oxygen;
 
-       
-
-
     }
 
     public void currentLevel(float oxygen)

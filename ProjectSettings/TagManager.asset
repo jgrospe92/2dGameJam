@@ -11,6 +11,7 @@ TagManager:
   - HP
   - InstantDeath
   - bullet
+  - OxygenTank
   layers:
   - Default
   - TransparentFX

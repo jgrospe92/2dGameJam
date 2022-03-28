@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class AIPatrol : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class AIPatrol : MonoBehaviour
     // ref to the bullet
     public Bullet bulletPrefab;
 
+    private SpriteRenderer sp;
+
 
 
     [SerializeField] private HealthBar hp;
@@ -40,8 +43,8 @@ public class AIPatrol : MonoBehaviour
         // set inital HP
         currentHp = maxHp;
         hp.setMaxHp(currentHp);
-       
 
+        sp = GetComponent<SpriteRenderer>();
 
 
     }
@@ -50,7 +53,10 @@ public class AIPatrol : MonoBehaviour
     {
         if (collision.gameObject.tag == "bullet")
         {
+            StartCoroutine(FlashRed());
             TakeDamage(bulletPrefab.bulletDamage);
+
+
         }
 
         if (currentHp < 0.01f)
@@ -113,6 +119,13 @@ public class AIPatrol : MonoBehaviour
     void flip()
     {
         transform.rotation = Quaternion.Euler(0, 180, 0) * transform.rotation;
+    }
+
+    public IEnumerator FlashRed()
+    {
+        sp.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        sp.color = Color.white;
     }
 
     private void OnDrawGizmos()

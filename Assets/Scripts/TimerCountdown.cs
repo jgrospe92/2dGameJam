@@ -45,6 +45,14 @@ public class TimerCountdown : MonoBehaviour
             player.isDead = true;
             hud.SetActive(true);
         }
+
+        if (player.addOxygen)
+        {
+            timeValue += 5f;
+
+            ox.currentLevel(timeValue);
+            player.addOxygen = false;
+        }
     }
 
     void DisplayTime(float timeToDisplay)
@@ -63,4 +71,6 @@ public class TimerCountdown : MonoBehaviour
 
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
+
+   
 }

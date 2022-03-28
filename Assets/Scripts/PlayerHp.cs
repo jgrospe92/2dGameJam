@@ -40,8 +40,9 @@ public class PlayerHp : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             takeDamage(20);
+            player.damage = true;
         }
-     
+        
         if (collision.gameObject.tag == "HP")
         {
             if (currentHp < 100)
@@ -65,6 +66,17 @@ public class PlayerHp : MonoBehaviour
             hp.setHealth(0);
             player.isDead = true;
             hud.SetActive(true);
+        }
+
+       
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            
+            player.damage = false;
         }
     }
 

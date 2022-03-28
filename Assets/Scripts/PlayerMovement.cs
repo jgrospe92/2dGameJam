@@ -7,6 +7,9 @@ public class PlayerMovement : MonoBehaviour
     // Character
     private Rigidbody2D body;
 
+    // HUD
+    public GameObject hud;
+
     // Player speed
     [SerializeField] private float speed = 3;
     [SerializeField] private float jumpSpeeed = 5;
@@ -39,6 +42,8 @@ public class PlayerMovement : MonoBehaviour
     //  Ref for animator
     private Animator anim;
 
+    // Oxygen
+    public bool addOxygen = false;
 
     public JumpState jumpState = JumpState.GROUNDED;
 
@@ -47,6 +52,8 @@ public class PlayerMovement : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+
+        PlayerPrefs.DeleteAll();
        
     }
 
@@ -92,12 +99,14 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        // Set Animation
+        // Set walking & Jumping Animation
         anim.SetBool("isWalking", horizontalInput  != 0);
         anim.SetBool("isJump", jumpState == JumpState.JUMPING);
-        anim.SetBool("isDamage", !damage);
-            Debug.Log("Player hurt" + damage);
- 
+
+        // Set Damage Animation
+        anim.SetBool("isDamage", damage);
+     
+
         }
         else
         {
@@ -108,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-   
+  
 
     void flip()
     {
@@ -140,9 +149,26 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpState = JumpState.GROUNDED;
         }
+
+
+        if (collision.gameObject.tag == "Finish")
+        {
+            isDead = true;
+            hud.SetActive(true);
+        }
+
+
     }
 
-   
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("OxygenTank"))
+        {
+            addOxygen = true;
+            Destroy(collision.gameObject);
+        }
+    }
+
 
     // Enum class
     public enum JumpState
